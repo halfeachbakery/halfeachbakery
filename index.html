@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Half Each Bakery</title>
+
+<style>
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  margin:0;
+  background:#fafafa;
+  color:#222;
+  line-height:1.6;
+}
+header{
+  text-align:center;
+  padding:60px 20px 40px;
+}
+h1{
+  font-size:42px;
+  font-weight:500;
+  letter-spacing:1px;
+  margin-bottom:10px;
+}
+.tagline{
+  color:#777;
+  font-size:16px;
+}
+
+/* 高级淡入淡出轮播 */
+.carousel{
+  max-width:1000px;
+  margin:20px auto;
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+}
+.carousel-slide{
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:0;
+  transition: opacity 1.5s ease-in-out;
+  border-radius:12px;
+}
+.carousel-slide.active{
+  opacity:1;
+  position:relative;
+}
+
+/* Sections */
+section{
+  max-width:900px;
+  margin:auto;
+  padding:60px 20px;
+}
+h2{
+  font-weight:500;
+  margin-bottom:20px;
+}
+.bread-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.card{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+button{
+  background:#222;
+  color:white;
+  border:none;
+  padding:14px 22px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:15px;
+}
+.whatsapp{
+  margin-top:15px;
+}
+footer{
+  text-align:center;
+  padding:40px;
+  color:#777;
+}
+a{
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Half Each Bakery</h1>
+<p class="tagline">Life is better when shared. Half for you, half for someone you love.</p>
+</header>
+
+<!-- 高级淡入淡出轮播 -->
+<div class="carousel">
+  <img class="carousel-slide fade" src="images/sourdough1.jpg" alt="Sourdough">
+  <img class="carousel-slide fade" src="images/sourdough2.jpg" alt="Sourdough">
+  <img class="carousel-slide fade" src="images/bagel1.jpg" alt="Bagel">
+  <img class="carousel-slide fade" src="images/bagel2.jpg" alt="Bagel">
+  <img class="carousel-slide fade" src="images/butterbun1.jpg" alt="Butter Bun">
+</div>
+
+<section>
+<h2>Our Bread</h2>
+<div class="bread-grid">
+<div class="card">
+<h3>Country Sourdough</h3>
+<p>Natural fermented sourdough</p>
+<p>RM18</p>
+</div>
+<div class="card">
+<h3>Whole Wheat Sourdough</h3>
+<p>Healthy whole grain sourdough</p>
+<p>RM20</p>
+</div>
+<div class="card">
+<h3>Plain Bagel</h3>
+<p>Classic chewy bagel</p>
+<p>RM6</p>
+</div>
+<div class="card">
+<h3>Sesame Bagel</h3>
+<p>Toasted sesame bagel</p>
+<p>RM6</p>
+</div>
+<div class="card">
+<h3>Butter Bun</h3>
+<p>Soft fluffy sweet bread</p>
+<p>RM5</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Healthy Bread</h2>
+<p>Why Sourdough? Natural fermentation, easier digestion, no unnecessary additives. Good bread can be part of a healthy lifestyle.</p>
+</section>
+
+<section>
+<h2>Visit Us</h2>
+<p>654 (Stall 1), Jalan Delima 2, Taman Bukit Melaka, Bukit Beruang 75450</p>
+<p>Open Daily 7:30am – 6:30pm</p>
+
+<div class="whatsapp">
+<a href="https://wa.me/601121721752"><button>01121721752</button></a>
+<a href="https://wa.me/60177315147"><button>0177315147</button></a>
+</div>
+
+<h2>Location</h2>
+<iframe
+src="https://www.google.com/maps?q=654%20Jalan%20Delima%202%20Taman%20Bukit%20Melaka%20Bukit%20Beruang&output=embed"
+width="100%"
+height="300"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+</section>
+
+<section>
+<h2>Follow Us</h2>
+<p>@half_each_bakery</p>
+
+<!-- Instagram占位 -->
+<iframe 
+src="https://snapwidget.com/embed/1041076" 
+class="snapwidget-widget" 
+allowtransparency="true" 
+frameborder="0" 
+scrolling="no" 
+style="border:none; overflow:hidden; width:100%; height:400px">
+</iframe>
+</section>
+
+<footer>
+© 2026 Half Each Bakery
+</footer>
+
+<script>
+// 高级淡入淡出轮播
+let slides = document.querySelectorAll(".carousel-slide");
+let index = 0;
+slides[index].classList.add("active");
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 4000);
+</script>
+
+</body>
+</html>
